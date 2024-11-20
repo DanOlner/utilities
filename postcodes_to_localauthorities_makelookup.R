@@ -47,8 +47,12 @@ chk <- pc %>%
   relocate(localauthority_name, .after = localauthority_code)
 
 
-#Save and stick on github for use elsewhere
-write_csv(chk, paste0('data/postcode_localauthority_lookup_',Sys.Date(),'.csv'))
+#Save locally - a tad too big for github
+#p.s. instructions here for removing large files from commit history
+#https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+#Dropbox download:
+#https://www.dropbox.com/scl/fi/0873bsx2ka1d3clhs8e07/postcode_localauthority_lookup_2024-11-20.csv?rlkey=rtda1srm2nlzmqxc2ms6fllno&dl=1
+write_csv(chk, paste0('local/postcode_localauthority_lookup_',Sys.Date(),'.csv'))
 
 
 
